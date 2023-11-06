@@ -27,6 +27,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+            {/* @ts-expect-error Server Component */}
             <Header />
 
             {children}
