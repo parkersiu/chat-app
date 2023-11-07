@@ -1,4 +1,5 @@
 import ClientProviders from "@/components/ClientProviders";
+import FirebaseAuthProvider from "@/components/FirebaseAuthProvider";
 import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import type { Metadata } from "next";
@@ -21,17 +22,19 @@ export default function RootLayout({
     <ClientProviders>
       <html lang="en">
         <body className="flex flex-col min-h-screen">
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {/* @ts-expect-error Server Component */}
-            <Header />
+          <FirebaseAuthProvider>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              {/* @ts-expect-error Server Component */}
+              <Header />
 
-            {children}
-          </ThemeProvider>
+              {children}
+            </ThemeProvider>
+          </FirebaseAuthProvider>
         </body>
       </html>
     </ClientProviders>
