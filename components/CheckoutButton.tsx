@@ -15,7 +15,6 @@ function CheckoutButton() {
     setLoading(true);
 
     const docRef = await addDoc(
-      // @ts-ignore
       collection(db, "customers", session.user.id, "checkout_sessions"),
       {
         price: "price_1O9gojK0Z96X7j6P8O9c4hkU",

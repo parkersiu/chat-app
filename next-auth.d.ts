@@ -4,7 +4,7 @@ declare module "next-auth" {
   interface Session {
     firebaseToken?: string;
     user: {
-      id: String;
+      id: string;
     } & DefaultSession["user"];
   }
 }
