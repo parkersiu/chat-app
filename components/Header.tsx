@@ -35,7 +35,6 @@ async function Header() {
         </div>
       </nav>
 
-      {/* Upgrade Banner */}
       <UpgradeBanner />
     </header>
   );
