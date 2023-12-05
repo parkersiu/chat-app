@@ -1,4 +1,4 @@
-/* "use server";
+"use server";
 
 import { authOptions } from "@/auth";
 import { adminDb } from "@/firebase-admin";
@@ -40,4 +40,3 @@ export async function generatePortalLink() {
 
   redirect(stripeSession.url);
 }
- */
